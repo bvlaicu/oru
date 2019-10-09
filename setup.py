@@ -36,7 +36,7 @@ class PyTest(TestCommand):
 setup(
     name='oru',
     version=find_version('oru', '__init__.py'),
-    url='http://github.com/bvlaicu/oru/',
+    url='https://github.com/bvlaicu/oru/',
     license='Apache Software License',
     author='Bogdan Vlaicu',
     tests_require=['pytest'],

@@ -5,6 +5,8 @@ It requires the meter id.
 Example usage:
 
 ```
+from oru import Meter
+
 meter = Meter("701139904")
 energy_usage_wh = meter.last_read()
 ```
