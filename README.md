@@ -3,5 +3,9 @@ Oru calls the API of the Orange and Rockland Utility smart energy meter to retur
 It requires the meter id.
 
 Example usage:
-    oru.get_last_meter_read_wh("701139904")
+
+```
+meter = Meter("701139904")
+energy_usage_wh = meter.last_read()
+```
 
