@@ -22,8 +22,8 @@ class Meter(object):
     def last_read(self):
         """Return the last meter read in WH"""
         try:
-            url = 'https://oru.opower.com/ei/edge/apis/cws-real-time-ami-v1/cws' \
-                '/oru/meters/' + self.meter_id + '/usage'
+            url = 'https://oru.opower.com/ei/edge/apis/cws-real-time-ami-v1' \
+                '/cws/oru/meters/' + self.meter_id + '/usage'
             _LOGGER.debug("url = %s", url)
 
             response = requests.get(url)
@@ -33,9 +33,11 @@ class Meter(object):
             _LOGGER.debug("jsonResponse = %s", jsonResponse)
 
             if 'error' in jsonResponse:
-                raise MeterError('Error in getting the meter data: %s', jsonResponse['error'])
+                raise MeterError('Error in getting the meter data: %s', \
+                                    jsonResponse['error'])
 
-            # parse the return reads and extract the most recent one (i.e. last not None)
+            # parse the return reads and extract the most recent one
+            # (i.e. last not None)
             lastRead = None
             for read in jsonResponse['reads']:
                 if read['value'] is None:
@@ -44,10 +46,6 @@ class Meter(object):
             _LOGGER.info("lastRead = %s", lastRead)
 
             val = lastRead['value']
-            _LOGGER.debug("val = %s", val, )
-
-            val *= 1000  # transform from KWH in WH
-            val = int(round(val))
             _LOGGER.info("val = %s %s", val, self.unit_of_measurement)
 
             self.last_read_wh = val
