@@ -1,6 +1,6 @@
 """
-Oru calls the API of the Orange and Rockland Utility smart energy meter 
-to return the current energy usage.
+Oru calls the API of the Orange and Rockland Utility smart energy meter
+to return the last meter read for a given meter number.
 """
 
 from .meter import Meter
