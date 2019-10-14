@@ -33,8 +33,8 @@ class Meter(object):
             _LOGGER.debug("jsonResponse = %s", jsonResponse)
 
             if 'error' in jsonResponse:
-                raise MeterError('Error in getting the meter data: %s', \
-                                    jsonResponse['error'])
+                raise MeterError('Error in getting the meter data: %s',
+                                 jsonResponse['error'])
 
             # parse the return reads and extract the most recent one
             # (i.e. last not None)
