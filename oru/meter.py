@@ -43,10 +43,10 @@ class Meter(object):
                 if read['value'] is None:
                     break
                 lastRead = read
-            _LOGGER.info("lastRead = %s", lastRead)
+            _LOGGER.debug("lastRead = %s", lastRead)
 
             val = lastRead['value']
-            _LOGGER.info("val = %s %s", val, self.unit_of_measurement)
+            _LOGGER.debug("val = %s %s", val, self.unit_of_measurement)
 
             self.last_read_wh = val
 

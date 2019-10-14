@@ -4,12 +4,13 @@ Orange and Rockland Utility smart energy meter
 Oru calls the API of the Orange and Rockland Utility
 smart energy meter to return the current energy usage.
 
-It requires the meter id.
+It requires a meter number.
+You can find your meter number fon your Orange and Rockland Utility bill.
 
 Example usage::
 
     from oru import Meter
 
-    meter = Meter("701139904")
-    energy_usage_wh = meter.last_read()
+    meter = Meter("701138804")
+    energy_usage_kWh = meter.last_read()
 

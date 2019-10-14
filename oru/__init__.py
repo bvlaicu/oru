@@ -6,4 +6,4 @@ to return the current energy usage.
 from .meter import Meter
 from .meter import MeterError
 
-__version__ = '0.1.6'
+__version__ = '0.1.9'
