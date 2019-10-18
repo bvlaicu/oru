@@ -43,7 +43,7 @@ setup(
     install_requires=['requests'],
     cmdclass={'test': PyTest},
     author_email='bogdanvlaicu@yahoo.com',
-    description='Orange and Rockland Utility Smart Energy Meter',
+    description='Python client for Orange and Rockland Utility smart energy meters',
     long_description=long_description,
     entry_points={
         'console_scripts': [

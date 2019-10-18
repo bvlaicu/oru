@@ -1,6 +1,8 @@
 """Orange and Rockland Utility Smart Energy Meter"""
 import requests
-import logging as _LOGGER
+import logging
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class MeterError(Exception):
