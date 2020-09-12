@@ -1,3 +1,10 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+DEPRECATED. REPLACED BY [bvlaicu/coned](https://github.com/bvlaicu/coned)
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
 This is a utility package to interact with an Orange and Rockland Utility smart energy meter
 
 Oru calls the APIs of the Orange and Rockland Utility smart energy meter to return the latest meter read value and unit of measurement.
